@@ -4,7 +4,6 @@ function parseNum(numInput){
     num = parseInt(num, 10);
 
     if (!isNaN(num)) {
-        console.log("The integer value is: " + num);
         return num;
     } else {
         alert("Invalid input. Please enter a valid number.");
@@ -12,43 +11,66 @@ function parseNum(numInput){
 
 }
 
-//grab the button and assign a function to it
-//look into switch statements
 
 let add = document.getElementById('additionButton');
 add.addEventListener('click', () => {
-    calculator('add')
+    calculator('Add');
 })
+
+let subtract = document.getElementById('subtractButton');
+subtract.addEventListener('click', () => {
+    calculator('Subtract');
+})
+
+let multiply = document.getElementById('multiplyButton');
+multiply.addEventListener('click', () => {
+    calculator('Multiply');
+})
+
+let divide = document.getElementById('divideButton');
+divide.addEventListener('click', () => {
+    calculator('Divide');
+})
+
 
 function calculator(buttonId){
 
-    console.log(buttonId);
+    //console.log(buttonId);
 
-    const num1 = document.getElementById("num1").value;
-    const num2 = document.getElementById("num2").value;
+    const num1 = parseNum(document.getElementById("num1").value);
+    const num2 = parseNum(document.getElementById("num2").value);
 
-    if(buttonId = "add"){
-        result = parseNum(num1) + parseNum(num2);
-        console.log(result);
-        return result;
+    switch(buttonId){
+        case 'Add':
+            result = num1 + num2;
+            break;
+            //console.log(result);
+            //return result;
+        case 'Subtract':
+            result = num1 - num2;
+            //console.log(result);
+            break;
+            //return result;
+        case 'Multiply':
+            result = num1 * num2;
+            //console.log(result);
+            break;
+            //return result;
+        case 'Divide':
+            if(num2 === 0){
+                result = "Cannot Divide by Zero."
+                break;
+                //return result;
+            }
+            else{
+                result = num1 / num2;
+                //console.log(result);
+                break;
+                //return result;
+            }
     }
 
-    if(buttonId = "subtractButton"){
-        result = parseNum(num1) - parseNum(num2);
-        console.log(result);
-        return result;
-    }
-
-    if(buttonId = "multiplyButton"){
-        result = parseNum(num1) * parseNum(num2);
-        console.log(result);
-        return result;
-    }
-
-    if(buttonId = "divideButton"){
-        result = parseNum(num1) / parseNum(num2);
-        console.log(result);
-        return result;
-    }
+    console.log(result);
+    document.getElementById('result').textContent = `Result: ${result}`;
     
 }
