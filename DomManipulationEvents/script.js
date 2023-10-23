@@ -70,7 +70,7 @@ function calculator(buttonId){
             }
     }
 
-    console.log(result);
     document.getElementById('result').textContent = `Result: ${result}`;
     
 }
+
