@@ -1,0 +1,19 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "modules assignment",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsaberex/javascriptProject.git#main"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fsaberex/javascriptProject/issues"
+  },
+  "homepage": "https://github.com/fsaberex/javascriptProject/tree/main#readme"
+}
