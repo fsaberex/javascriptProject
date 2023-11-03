@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/fsaberex/javascriptProject/issues"
   },
-  "homepage": "https://github.com/fsaberex/javascriptProject/tree/main#readme"
+  "homepage": "https://github.com/fsaberex/javascriptProject/tree/main#readme",
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0"
+  }
 }
